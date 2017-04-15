@@ -76,13 +76,15 @@ button.pt-button {
     font-weight: 200;
     font-size: 20px;
     // force width so non-uniform countdown text widths don't change width of progress meter
-    width: 70px;
+    width: 50px;
   }
 
+  $progress-meter-height: 25px;
+
   .progress-meter {
-    border-left: 1px solid $gray3;
-    border-right: 1px solid $gray3;
-    height: 20px;
+    border-left: 2px solid $gray3;
+    border-right: 2px solid $gray3;
+    height: $progress-meter-height;
     margin: 0 10px;
     position: relative;
 
@@ -92,7 +94,7 @@ button.pt-button {
     &:before {
       content: "";
       height: 1px;
-      border-top: 1px solid $gray3;
+      border-top: 2px solid $gray3;
       border-top-style: dashed;
       position: absolute;
       top: 50%;
@@ -100,7 +102,7 @@ button.pt-button {
     }
 
     .progress-meter-line {
-      height: 20px;
+      height: 100%;
       border-left: 1px solid $gray1;
     }
   }
