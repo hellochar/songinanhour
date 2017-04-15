@@ -12,7 +12,7 @@ import "../src/index.scss";
 
 ReactDOM.render(
     <HashRouter>
-        <div>
+        <div className="root-container">
             <Route exact path="/" component={MainPage}/>
             <Route path="/start" component={MakeSong}/>
         </div>

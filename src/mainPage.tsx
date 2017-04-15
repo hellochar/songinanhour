@@ -17,6 +17,14 @@ export default class MainPage extends React.Component<IMainPageProps, {}> {
                         It doesn't have to be good.
                         Publish it. Have fun! Profit.
                     </p>
+                    <p className="header-explanation">Use any software and tools available to you to
+                        make. Add lyrics, or don't. Make crazy noise.
+                        Explore a new chord progression or melody.
+                    </p>
+                    <p className="header-explanation">
+                        When you feel like you have something (or the hour is up),
+                        upload your song to soundcloud or YouTube and click "I'm done!".
+                    </p>
                 </div>
                 <div className="start-button-container">
                     <Link to="/start">
