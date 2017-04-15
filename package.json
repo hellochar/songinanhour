@@ -5,7 +5,9 @@
   "author": "Xiaohan Zhang <xzhang@palantir.com>",
   "license": "MIT",
   "scripts": {
-    "build": "tsc -p .",
+    "build": "run-s build:typescript build:webpack",
+    "build:typescript": "tsc -p .",
+    "build:webpack": "webpack",
     "start": "run-p start:typescript-watch start:webpack-dev-server",
     "start:typescript-watch": "tsc -w -p .",
     "start:webpack-dev-server": "webpack-dev-server"

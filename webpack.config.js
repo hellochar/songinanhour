@@ -21,7 +21,9 @@ module.exports = {
             },
             {
                 test: /\.(eot|svg|ttf|woff|woff2)$/,
-                use: [ 'file-loader' ]
+                use: [{
+                    loader: 'file-loader?name=[name].[ext]',
+                }]
             }
         ]
     }
