@@ -1,7 +1,11 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 
+import MainPage from "./mainPage";
+
+import "../src/index.css";
+
 ReactDOM.render(
-    <div>Test!!!</div>,
+    <MainPage></MainPage>,
     document.getElementById("root")
 );

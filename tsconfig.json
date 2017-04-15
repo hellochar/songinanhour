@@ -8,5 +8,6 @@
     "noUnusedParameters": true,
     "strictNullChecks": true,
     "outDir": "build"
-  }
+  },
+  "include": ["src"]
 }

@@ -6,9 +6,12 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc -p .",
-    "build:watch": "tsc -p -w ."
+    "start": "run-p start:typescript-watch start:webpack-dev-server",
+    "start:typescript-watch": "tsc -w -p .",
+    "start:webpack-dev-server": "webpack-dev-server"
   },
   "dependencies": {
+    "@blueprintjs/core": "^1.14.0",
     "@types/react": "^15.0.21",
     "@types/react-dom": "^0.14.23",
     "react": "^15.5.4",
@@ -16,6 +19,10 @@
     "typescript": "^2.2.2"
   },
   "devDependencies": {
+    "css-loader": "^0.28.0",
+    "file-loader": "^0.11.1",
+    "npm-run-all": "^4.0.2",
+    "style-loader": "^0.16.1",
     "webpack": "^2.4.1",
     "webpack-dev-server": "^2.4.2"
   }
