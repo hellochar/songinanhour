@@ -3,6 +3,7 @@ import { RouteComponentProps } from "react-router";
 import moment = require("moment");
 import { Link } from "react-router-dom";
 import { Button, Intent } from "@blueprintjs/core";
+import Inspiration from "./inspiration/index";
 
 export type IMakeSongProps = RouteComponentProps<{ startTime: number }>;
 
@@ -23,7 +24,7 @@ export default class MakeSong extends React.Component<IMakeSongProps, IMakeSongS
         now: Date.now(),
     };
 
-    private setIntervalHandle: number;
+    private setIntervalHandle: number | null;
 
     componentDidMount() {
         // render the new time immediately, otherwise we miss 59:59
@@ -42,8 +43,10 @@ export default class MakeSong extends React.Component<IMakeSongProps, IMakeSongS
     }
 
     componentWillUnmount() {
-        clearInterval(this.setIntervalHandle);
-        this.setIntervalHandle = null;
+        if (this.setIntervalHandle != null) {
+            clearInterval(this.setIntervalHandle);
+            this.setIntervalHandle = null;
+        }
     }
 
     render() {
@@ -60,6 +63,9 @@ export default class MakeSong extends React.Component<IMakeSongProps, IMakeSongS
             <div className="make-song-container">
                 <div className="motivation">
                     Have fun!
+                </div>
+                <div className="inspiration-container">
+                    <Inspiration></Inspiration>
                 </div>
                 <div className="footer">
                     <div className="make-song-countdown">
