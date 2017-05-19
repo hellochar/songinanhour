@@ -8,7 +8,7 @@ export default class FinishPage extends React.Component<IFinishPageProps, {}> {
     render() {
         return (
             <div className="finish-page">
-                <div className="finish-page-congratulator">Congrats! You made a song in an hour!</div>
+                <div className="finish-page-congratulator">Congrats! You made a song in an hour!!!!!</div>
             </div>
         )
     }
