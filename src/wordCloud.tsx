@@ -21,6 +21,7 @@ export default class WordCloud extends React.PureComponent<{}, IWordCloudState> 
         if (this.state.wordCloud != null) {
             return this.state.wordCloud.map((element) => <div key={element}>{element}</div>);
         }
+        return <div>Type something into the box!</div>;
     }
 
     render() {
