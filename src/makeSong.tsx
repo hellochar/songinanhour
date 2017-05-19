@@ -4,6 +4,7 @@ import moment = require("moment");
 import { Link } from "react-router-dom";
 import { Button, Intent } from "@blueprintjs/core";
 import Inspiration from "./inspiration/index";
+import WordCloud from "./wordCloud";
 
 export type IMakeSongProps = RouteComponentProps<{ startTime: number }>;
 
@@ -66,6 +67,9 @@ export default class MakeSong extends React.Component<IMakeSongProps, IMakeSongS
                 </div>
                 <div className="inspiration-container">
                     <Inspiration></Inspiration>
+                </div>
+                <div className="inspiration-container">
+                    <WordCloud></WordCloud>
                 </div>
                 <div className="footer">
                     <div className="make-song-countdown">
