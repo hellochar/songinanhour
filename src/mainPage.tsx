@@ -23,7 +23,7 @@ export default class MainPage extends React.Component<IMainPageProps, {}> {
                     </p>
                     <p className="header-explanation">
                         When you feel like you have something (or the hour is up),
-                        upload your song to soundcloud or YouTube and click "I'm done!".
+                        upload your song to soundcloud or YouTube and click "I'm done!" and use the hashtag "#songinanhour"!
                     </p>
                 </div>
                 <div className="start-button-container">
